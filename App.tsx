@@ -1,13 +1,16 @@
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Home from './components/Home';
-import MenuExample from './components/menu';
+import Home from './assests/src/components/Home';
 
 export default function App() {
   return (
-    <View>
-      <Text>App.tsx</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View>
+          <Home />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 

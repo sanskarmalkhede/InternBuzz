@@ -23,6 +23,14 @@ const currentHiringData = [
     stipend: '₹ 80,000',
     duration: '6 months',
   },
+  {
+    id: 'current-4',
+    title: 'Sales Executive',
+    company: 'Amazon',
+    location: 'Hyderabad',
+    stipend: '₹ 15,000',
+    duration: '8 months',
+  },
 ];
 export default currentHiringData;
 

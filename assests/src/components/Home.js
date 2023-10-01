@@ -1,13 +1,11 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import CardView from './cardView';
-import MenuExample from './menu';
+import CardView from './currentHiringCard';
 
 export default function Home() {
   return (
     <View>
-      <Text>Home</Text>
-      <MenuExample />
+      <Text style={{fontSize: 20, color: 'white'}}>This is "Home.tsx"</Text>
       <CardView />
     </View>
   );
