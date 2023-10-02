@@ -1,12 +1,13 @@
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Home from './assests/src/components/Home';
+import colors from './assests/colors/colors';
 
 export default function App() {
   return (
     <SafeAreaView>
       <ScrollView>
-        <View>
+        <View style={styles.container}>
           <Home />
         </View>
       </ScrollView>
@@ -14,4 +15,8 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.background,
+  },
+});

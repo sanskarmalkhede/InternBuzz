@@ -1,21 +1,13 @@
-import {
-  ScrollView,
-  SafeAreaView,
-  FlatList,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  StatusBar,
-} from 'react-native';
+import {FlatList, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import currentHiringData from '../../data/currentHiringData';
 import colors from '../../colors/colors';
-import Icon from 'react-native-vector-icons/EvilIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialComunnityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function currentHiringCard() {
   return (
-    <SafeAreaView>
+    <>
       <Text style={styles.heading}>Currently hiring</Text>
       <FlatList
         horizontal={true}
@@ -27,13 +19,19 @@ export default function currentHiringCard() {
             <Text style={styles.title}> {item.company}</Text>
 
             <Text style={styles.title}>
-              <Icon name="location" style={styles.location} /> {item.location}
+              <MaterialIcons name="location-on" style={styles.icon} />{' '}
+              {item.location}
             </Text>
             <Text style={styles.title}>
-              <Icon name="location" style={styles.location} /> {item.stipend}
+              <MaterialComunnityIcons name="cash" style={styles.icon} />{' '}
+              {item.stipend}
             </Text>
             <Text style={styles.title}>
-              <Icon name="location" style={styles.location} /> {item.duration}
+              <MaterialComunnityIcons
+                name="calendar-month-outline"
+                style={styles.icon}
+              />{' '}
+              {item.duration}
             </Text>
             <TouchableOpacity style={styles.button}>
               <Text style={styles.buttonText}>View Details ↗</Text>
@@ -41,7 +39,7 @@ export default function currentHiringCard() {
           </View>
         )}
       />
-    </SafeAreaView>
+    </>
   );
 }
 
@@ -54,7 +52,7 @@ const styles = StyleSheet.create({
   },
   container: {},
   item: {
-    backgroundColor: '#A5F1E9',
+    backgroundColor: colors.activecard,
     borderRadius: 15,
     padding: 20,
     marginVertical: 15,
@@ -65,15 +63,14 @@ const styles = StyleSheet.create({
     color: colors.black,
     width: 200,
   },
-  location: {
+  icon: {
     fontSize: 20,
     color: colors.black,
   },
   button: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: "#19A7CE",
+    textAlign: 'center',
+    backgroundColor: colors.button,
     padding: 10,
     borderRadius: 10,
     width: 120,

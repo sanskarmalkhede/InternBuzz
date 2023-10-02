@@ -10,45 +10,44 @@ import {
 import React from 'react';
 import currentHiringData from '../../data/upcomingInternshipsData';
 import colors from '../../colors/colors';
-import EvilIcons from 'react-native-vector-icons/EvilIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialComunnityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function upcomingInternshipsCard() {
   return (
-    <SafeAreaView>
+    <>
       <Text style={styles.heading}>Upcoming Internships</Text>
-      <FlatList
-        style={styles.container}
-        data={currentHiringData}
-        renderItem={({item}) => (
-          <>
+      <ScrollView style={styles.container}>
+        <FlatList
+          data={currentHiringData}
+          renderItem={({item}) => (
             <View style={styles.item}>
               <Text style={styles.title}>{item.title}</Text>
               <Text style={styles.title}> {item.company}</Text>
 
               <Text style={styles.title}>
-                <EvilIcons name="location" style={styles.icon} />{' '}
+                <MaterialIcons name="location-on" style={styles.icon} />{' '}
                 {item.location}
               </Text>
               <Text style={styles.title}>
-                <MaterialCommunityIcons name="cash" style={styles.icon} />{' '}
+                <MaterialComunnityIcons name="cash" style={styles.icon} />{' '}
                 {item.stipend}
               </Text>
               <Text style={styles.title}>
-                <MaterialCommunityIcons
-                  name="calendar-month"
+                <MaterialComunnityIcons
+                  name="calendar-month-outline"
                   style={styles.icon}
                 />{' '}
                 {item.duration}
               </Text>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>View Details ↗</Text>
-            </TouchableOpacity>
+              <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>View Details ↗</Text>
+              </TouchableOpacity>
             </View>
-          </>
-        )}
-      />
-    </SafeAreaView>
+          )}
+        />
+      </ScrollView>
+    </>
   );
 }
 
@@ -61,7 +60,7 @@ const styles = StyleSheet.create({
   },
   container: {flex: 1},
   item: {
-    backgroundColor: colors.orange,
+    backgroundColor: colors.unActiveCard,
     borderRadius: 15,
     padding: 20,
     marginVertical: 10,
@@ -78,9 +77,8 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: "#19A7CE",
+    textAlign: 'center',
+    backgroundColor: colors.button,
     padding: 10,
     borderRadius: 10,
     width: 120,
