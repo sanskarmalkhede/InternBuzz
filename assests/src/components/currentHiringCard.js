@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Text,
   View,
+  TouchableOpacity,
   StatusBar,
 } from 'react-native';
 import React from 'react';
@@ -34,6 +35,9 @@ export default function currentHiringCard() {
             <Text style={styles.title}>
               <Icon name="location" style={styles.location} /> {item.duration}
             </Text>
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.buttonText}>View Details ↗</Text>
+            </TouchableOpacity>
           </View>
         )}
       />
@@ -52,8 +56,8 @@ const styles = StyleSheet.create({
   item: {
     backgroundColor: '#A5F1E9',
     borderRadius: 15,
-    padding: 25,
-    marginVertical: 5,
+    padding: 20,
+    marginVertical: 15,
     marginHorizontal: 10,
   },
   title: {
@@ -64,5 +68,22 @@ const styles = StyleSheet.create({
   location: {
     fontSize: 20,
     color: colors.black,
+  },
+  button: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: "#19A7CE",
+    padding: 10,
+    borderRadius: 10,
+    width: 120,
+    height: 40,
+    marginTop: 10,
+  },
+  buttonText: {
+    alignItems: 'center',
+    fontSize: 15,
+    color: colors.black,
+    fontWeight: 'bold',
   },
 });

@@ -1,6 +1,14 @@
 const upcomingInternshipsData = [
   {
     id: 'up-1',
+    title: 'Sales Executive',
+    company: 'Amazon',
+    location: 'Hyderabad',
+    stipend: '₹ 15,000',
+    duration: '8 months',
+  },
+  {
+    id: 'up-2',
     title: 'Android Developer',
     company: 'Yolo Bus',
     location: 'Bangalore',
@@ -8,7 +16,7 @@ const upcomingInternshipsData = [
     duration: '3 months',
   },
   {
-    id: 'up-2',
+    id: 'up-3',
     title: 'React Developer',
     company: 'SAP Labs',
     location: 'Mumbai',
@@ -16,7 +24,7 @@ const upcomingInternshipsData = [
     duration: '2 months',
   },
   {
-    id: 'up-3',
+    id: 'up-4',
     title: 'Backend Developer',
     company: 'Microsoft',
     location: 'Gurugram',

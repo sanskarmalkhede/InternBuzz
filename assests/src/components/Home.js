@@ -1,12 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import CardView from './currentHiringCard';
+import CurrentlyHiringCardView from './currentHiringCard';
+import UpcomingInternshipsCardView from './upcomingInternshipsCard';
 
 export default function Home() {
   return (
     <View>
-      <Text style={{fontSize: 20, color: 'white'}}>This is "Home.tsx"</Text>
-      <CardView />
+      <Text style={{fontSize: 15}}>Let's help land your dream career</Text>
+      <CurrentlyHiringCardView />
+      <UpcomingInternshipsCardView />
     </View>
   );
 }
